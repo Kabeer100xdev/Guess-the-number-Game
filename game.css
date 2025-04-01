@@ -1,0 +1,152 @@
+.section-game {
+  padding: 9.6rem 0;
+  background: linear-gradient(to right bottom, #212529, rgb(77, 171, 247, 1));
+}
+
+.Left {
+  width: 70%;
+}
+.Right {
+  grid-column: 2;
+}
+
+.Game-window {
+  border: 2px solid #f8f9fa;
+  border-radius: 1.2rem;
+  margin-bottom: 4.8rem;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 4.8rem #f8f9fa25;
+  border-radius: 1.2rem;
+}
+.number {
+  text-align: center;
+  font-size: 12rem;
+  padding: 3.2rem;
+  color: #f8f9fa;
+}
+
+.game-interface {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+}
+.game-text {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 3.2rem;
+  grid-column: 1 / -1;
+  color: #f8f9fa;
+}
+
+button {
+  grid-row: 3;
+  border: none;
+  background: none;
+  /* height: 100%; */
+}
+.guess-input {
+  text-align: center;
+  border-radius: 1.2rem;
+  padding: 0.5rem 2rem;
+  border: 5px solid #ddd;
+  margin-bottom: 2.4rem;
+  width: 90%;
+  font-size: 3.2rem;
+  grid-row: 2;
+  grid-column: 1 / -1;
+  justify-self: center;
+  box-shadow: inset 0 0 3.2rem #4dabf7;
+}
+.check-btn {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  background-color: #4dabf7;
+  color: #f8f9fa;
+  border-radius: 1.2rem;
+  box-shadow: inset 0 0 2.4rem #f8f9fa;
+  transition: background-color 0.25s, box-shadow 0.25s;
+  padding: 2rem 2rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.again-btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #555;
+  font-size: 2.4rem;
+  box-shadow: inset 0 0 2.4rem #4dabf7;
+  background-color: #f8f9fa;
+  border-radius: 1.2rem;
+  transition: background-color 0.25s, box-shadow 0.25s;
+
+  padding: 2rem 2rem;
+}
+
+.check-btn:hover {
+  background-color: #4dabf794;
+  box-shadow: none;
+}
+.check-btn:active {
+  background-color: #65b2f1;
+}
+
+.again-btn:hover {
+  background-color: #f8f9fac9;
+  box-shadow: none;
+}
+.again-btn:active {
+  background-color: #008cff;
+}
+
+.Right {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  color: #f8f9fa;
+  justify-items: center;
+}
+
+.game-rules {
+  font-size: 2rem;
+  color: #f8f9fa4f;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+  /* padding: 3.2rem; */
+  margin-bottom: 3.2rem;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3.2rem;
+  border: 2px solid #f8f9fa69;
+
+  border-radius: 1.2rem;
+}
+
+.current-score-text {
+  font-size: 2.4rem;
+  letter-spacing: 0.65rem;
+  text-transform: uppercase;
+}
+.current-score {
+  font-size: 4.8rem;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.high-score-text {
+  font-size: 2.4rem;
+  letter-spacing: 0.65rem;
+  text-transform: uppercase;
+}
+.high-score {
+  font-size: 4.8rem;
+}

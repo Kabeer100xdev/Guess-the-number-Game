@@ -44,3 +44,15 @@ body {
   font-weight: 400;
   color: #555;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90rem;
+  margin: 0 auto;
+  justify-items: center;
+  padding: 4.8rem 3.2rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
