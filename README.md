@@ -30,7 +30,7 @@ _Replace this with the actual video link_
 
 ## 🚀 Live Demo
 
-_Play the game here: [Live Demo Link](https://your-live-demo-link.com)_
+_Play the game here: [Live Demo Link](https://kabeer100xdev.github.io/Guess-the-number-Game/)_
 
 ## 🛠️ Technologies Used
 
