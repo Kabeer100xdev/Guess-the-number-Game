@@ -58,5 +58,4 @@ _Play the game here: [Live Demo Link](https://kabeer100xdev.github.io/Guess-the-
 ## 📬 Contact
 
 For any questions or suggestions, feel free to reach out:
-📧 Email: [your-email@example.com](mailto:your-email@example.com)
-🐙 GitHub: [your-github-profile](https://github.com/your-username)
+📧 Email: [tenzara1234@gmail.com](mailto:tenzara1234@gmail.com)
