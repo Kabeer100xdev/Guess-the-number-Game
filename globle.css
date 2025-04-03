@@ -1,39 +1,36 @@
 /* 
 ---01 TYPOGRAPHY SYSTEM
 
-
   FONT SIZE SYSTEM (px)
     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
   FONT WEIGHT
      400 
 
-  LINE HIGHT
+  LINE HEIGHT
   Default: 1
   1.5 / 1.6 
 
   
   ---COLORS
   -Primary: #e67e22
-  -Tints:
-  -Shades:
-  -Accents:
   -Grays: #555
   
-  -- Shadowns
+  --Shadows
   
-  -- Border Radius
+  --Border Radius
   
-  -- White space
+  --White Space
   SPACING SYSTEM (px)
     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-  */
+*/
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
@@ -45,14 +42,223 @@ body {
   color: #555;
 }
 
-.container {
+/* Game Section */
+.section-game {
+  display: flex;
+  align-items: center;
+  padding: 9.6rem 0;
+  background: linear-gradient(to right bottom, #212529, rgb(77, 171, 247, 1));
+  min-height: 100vh; /* Changed from height to min-height */
+}
+
+/* Game Container */
+.game-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 90rem;
-  margin: 0 auto;
-  justify-items: center;
+  max-width: 90rem;
   padding: 4.8rem 3.2rem;
   border-radius: 2rem;
   backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.234);
+  /* background-color: #f74d4db7; */
+  /* background-color: #60ce3173; */
+
+  transition: all 0.45s;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/* Left Section */
+.Left {
+  width: 70%;
+}
+
+.Game-window {
+  border: 2px solid #f8f9fa;
+  border-radius: 1.2rem;
+  margin-bottom: 4.8rem;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 4.8rem #f8f9fa25;
+}
+
+.number {
+  text-align: center;
+  font-size: 12rem;
+  padding: 3.2rem;
+  color: #f8f9fa;
+}
+
+/* Game Interface */
+.game-interface {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.game-text {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+  grid-column: 1 / -1;
+  color: #f8f9fa;
+  transition: all 0.25s;
+}
+
+/* Buttons */
+button {
+  grid-row: 3;
+  border: none;
+  background: none;
+}
+
+.guess-input {
+  text-align: center;
+  border-radius: 1.2rem;
+  padding: 0.5rem 2rem;
+  border: 5px solid #ddd;
+  margin-bottom: 2.4rem;
+  width: 100%;
+  font-size: 3.2rem;
+  grid-row: 2;
+  grid-column: 1/ -1;
+  justify-self: center;
+  box-shadow: inset 0 0 3.2rem #4dabf7;
+}
+
+.check-btn,
+.again-btn {
+  font-size: 2.4rem;
+  transition: background-color 0.25s, box-shadow 0.25s;
+  padding: 2rem 2rem;
+  font-weight: 600;
+  border-radius: 1.2rem;
+  text-transform: uppercase;
+}
+.check-btn {
+  background-color: #4dabf7;
+  color: #f8f9fa;
+  box-shadow: inset 0 0 2.4rem #f8f9fa;
+}
+
+.again-btn {
+  color: #555;
+  box-shadow: inset 0 0 2.4rem #4dabf7;
+  background-color: #f8f9fa;
+}
+
+.check-btn:hover {
+  background-color: #4dabf794;
+  box-shadow: none;
+}
+.check-btn:active {
+  background-color: #65b2f1;
+}
+
+.again-btn:hover {
+  background-color: #f8f9fac9;
+  box-shadow: none;
+}
+.again-btn:active {
+  background-color: #008cff;
+}
+
+/* Right Section */
+.Right {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  color: #f8f9fa;
+  justify-items: center;
+}
+
+.game-rules {
+  font-size: 2rem;
+  color: #f8f9fa4f;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+  margin-bottom: 3.2rem;
+}
+
+/* Score Container */
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3.2rem;
+  border: 2px solid #f8f9fa69;
+  border-radius: 1.2rem;
+}
+
+.current-score-text,
+.high-score-text {
+  font-size: 2.4rem;
+  letter-spacing: 0.65rem;
+  text-transform: uppercase;
+}
+
+.current-score,
+.high-score {
+  font-size: 4.8rem;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+/* ✅ FIXED MEDIA QUERY */
+@media (max-width: 848px) {
+  /* Converted from 53em */
+  .game-container {
+    grid-template-columns: 1fr;
+  }
+
+  .Left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+
+  .Right {
+    grid-column: auto;
+    text-align: center;
+  }
+
+  .game-interface {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .guess-input {
+    width: 100%;
+  }
+
+  .check-btn,
+  .again-btn {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .again-btn {
+    grid-row: 4;
+  }
+  .score-container {
+    gap: 4.2rem;
+  }
+  .Game-window {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 40%;
+  }
+  .game-container {
+    padding: 9.6rem 3.2rem;
+  }
 }

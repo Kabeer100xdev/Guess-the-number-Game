@@ -4,45 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="globle.css" />
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="quires.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
+    
     <main>
+     
+      
+ 
+  <!-- GAME -->
       <section class="section-game">
-        <div class="container "">
+        <div class="game-container "">
          
             <div class="Left">
               <div class="Game-window">
-                <h1 class="number">?</h1>
+                <h1 id="number" class="number">?</h1>
               </div>
 
               <div class="game-interface">
-                <p class="game-text">Start Guessing ...</p>
-                <input class="guess-input" type="number" />
-                <button class="check-btn">Check</button>
-                <button class="again-btn">Again</button>
+                <p id="game-text" class="game-text">Start Guessing ...</p>
+                <input id="input-el" class="guess-input" type="number" />
+                <button id="check-btn" class="check-btn">Check</button>
+                <button id="again-btn" class="again-btn">Again</button>
               </div>
             </div>
 
             <div class="Right">
-              <p class="game-rules">Between 1 to 20</p>
+              <p class="game-rules">Between 1 to 10</p>
 
               <div class="score-container">
                 <div class="score-box">
                   <p class="current-score-text">Current Score</p>
-                  <span class="current-score">12</span>
+                  <span id="current-score" class="current-score">12</span>
                 </div>
 
                 <div class="score-box">
                   <p class="high-score-text">Highest Score</p>
-                  <span class="high-score">20</span>
+                  <span id="highest-score" class="high-score">20</span>
                 </div>
               </div>
             </div>
           
         </div>
       </section>
+    
     </main>
+
   </body>
 </html>
