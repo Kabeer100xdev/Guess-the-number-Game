@@ -15,6 +15,7 @@ let highScore = 0;
 currentScore.textContent = score;
 highestScore.textContent = highScore;
 
+const twentyOne = new Audio("/21 - Sound Effect (HD).mp3");
 // Random Number
 let randomIndex = Math.trunc(Math.random() * 20) + 1;
 console.log(randomIndex);
@@ -33,6 +34,12 @@ checkBtn.addEventListener("click", () => {
       highScore = score;
       highestScore.textContent = highScore;
     }
+  } else if (guess === 21) {
+    GameText.textContent = "You though i dint know💀";
+    number.textContent = 21;
+    number.style.color = "#f410b3";
+    gamebody.style.backgroundColor = "#fca1e2b2";
+    twentyOne.play();
   } else if (guess !== randomIndex) {
     if (score > 1) {
       GameText.textContent = guess > randomIndex ? "📈Too High" : "📉Too Low";
@@ -50,7 +57,9 @@ checkBtn.addEventListener("click", () => {
 });
 
 againBtn.addEventListener("click", () => {
+  inputEl.value = "";
   gamebody.style.backgroundColor = " rgba(0, 0, 0, 0.234)";
+  number.style.color = "#fff";
   score = 10;
   currentScore.textContent = score;
   number.textContent = "?";
