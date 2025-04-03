@@ -15,7 +15,9 @@ let highScore = 0;
 currentScore.textContent = score;
 highestScore.textContent = highScore;
 
-const twentyOne = new Audio("/21 - Sound Effect (HD).mp3");
+const twentyOne = new Audio(
+  "/Guess-the-number-Game/21 - Sound Effect (HD).mp3"
+);
 // Random Number
 let randomIndex = Math.trunc(Math.random() * 20) + 1;
 console.log(randomIndex);
